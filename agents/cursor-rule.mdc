@@ -1,0 +1,25 @@
+---
+description: Use the CSRC Approval Pipeline skill to track CSRC regulatory approval progress by announcement level and generate pipeline status reports.
+alwaysApply: false
+---
+
+# CSRC Approval Pipeline Skill
+
+When the user asks about CSRC approval pipeline, regulatory announcements, approval progress tracking, or pipeline status reports, use the local skill package.
+
+Preferred local project path:
+
+```text
+.cursor/skills/csrc-approval-pipeline
+```
+
+Workflow:
+
+1. Read `.cursor/skills/csrc-approval-pipeline/SKILL.md`.
+2. Use `.cursor/skills/csrc-approval-pipeline/references/api_guide.md` for API reference.
+3. Set `PANDA_DATA_USERNAME`, `PANDA_DATA_PASSWORD`, and optionally `PANDA_DATA_BASE_URL` environment variables before running.
+4. For pipeline data: `python .cursor/skills/csrc-approval-pipeline/scripts/build.py`.
+5. For validation: `python .cursor/skills/csrc-approval-pipeline/scripts/test.py`.
+6. Use `run(input_data)` for raw pipeline records and `pipeline_summary(df)` for aggregated stats.
+7. Parse `result_json` for detailed announcement info (title, number, links, category).
+8. Preserve documented field names and date formats. Do not invent API parameters or authentication methods.

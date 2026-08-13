@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+.agents/skills/
+artifacts/
+.env
+*.env
+user.json
+.pandadata/
+生产产物/*.parquet
+生产产物/*.csv
+production/
+*.log

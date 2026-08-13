@@ -1,0 +1,4 @@
+interface:
+  display_name: "CSRC Approval Pipeline"
+  short_description: "A-share CSRC approval pipeline tracking — monitors regulatory approval progress by announcement level and generates pipeline status reports."
+  default_prompt: "Use $csrc-approval-pipeline to track CSRC approval pipeline progress. Set PANDA_DATA_USERNAME and PANDA_DATA_PASSWORD environment variables, then call run(input_data) to get pipeline records, or pipeline_summary(df) for aggregated statistics."

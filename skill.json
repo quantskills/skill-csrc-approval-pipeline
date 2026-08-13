@@ -1,0 +1,45 @@
+{
+  "build_id": "B02",
+  "build_name": "csrc-approval-pipeline",
+  "build_type": "result-type",
+  "data_source": "PandaData",
+  "version": "1.0.0",
+  "description": "A-share CSRC approval pipeline tracking skill — monitors regulatory approval progress, categorizes by announcement level, and generates pipeline status reports.",
+  "author": "QUANTSKILLS Team",
+  "created_date": "2025-07-13",
+  "tags": ["quant", "csrc", "approval", "pipeline", "a-share", "pandadata"],
+  "category": "pipeline-tracking",
+  "spec": {
+    "pipeline_type": "csrc-approval",
+    "asset_class": "stock",
+    "region": "CN",
+    "announcement_levels": ["01", "02", "03"],
+    "level_labels": {
+      "01": "Initial Notice / Disclosure",
+      "02": "Review Stage",
+      "03": "Final Decision"
+    },
+    "output_format": "BUILD-fields"
+  },
+  "dependencies": {
+    "python": ">=3.8",
+    "pandas": ">=1.3.0",
+    "numpy": ">=1.20.0",
+    "pandadata": ">=0.0.12"
+  },
+  "scripts": {
+    "build": "scripts/build.py",
+    "test": "scripts/test.py"
+  },
+  "config": {
+    "default_start_date_offset": 30,
+    "default_end_date_offset": 0,
+    "max_date_range_days": 365
+  },
+  "production": {
+    "output_format": "BUILD-parquet",
+    "update_frequency": "daily",
+    "retention_period": "1_year",
+    "backup_strategy": "daily"
+  }
+}
