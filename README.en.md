@@ -84,3 +84,6 @@ csrc-approval-pipeline/
 ## Disclaimer
 
 This skill produces statistical analysis based on public data. Nothing here constitutes investment advice.
+
+
+Pandadata compatibility maintenance: [abgyjaguo](https://github.com/abgyjaguo). Existing authorship is retained.
